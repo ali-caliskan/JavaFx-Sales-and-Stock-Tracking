@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="620.0" prefWidth="769.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.raporekraniController">
+   <children>
+      <Label layoutX="90.0" layoutY="136.0" text="Toplam Satış Tutarı">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tutartxf" layoutX="235.0" layoutY="134.0" prefHeight="25.0" prefWidth="163.0" />
+      <Button fx:id="stokbtn" layoutX="340.0" layoutY="534.0" mnemonicParsing="false" onAction="#stokclick" prefHeight="50.0" prefWidth="122.0" text="Stok Ekranı">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-move-stock-25.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="satısbtn" layoutX="195.0" layoutY="534.0" mnemonicParsing="false" onAction="#satısclick" prefHeight="50.0" prefWidth="122.0" text="Satış Ekranı">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-exchange-lira-25.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TableView fx:id="raportableview" layoutX="90.0" layoutY="181.0" prefHeight="332.0" prefWidth="616.0">
+        <columns>
+          <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="urunadi" prefWidth="75.0" text="Ürün Adı" />
+            <TableColumn fx:id="kategori" prefWidth="75.0" text="Kategori" />
+            <TableColumn fx:id="beden" prefWidth="75.0" text="Beden" />
+            <TableColumn fx:id="renk" prefWidth="75.0" text="Renk" />
+            <TableColumn fx:id="fiyat" prefWidth="75.0" text="Fiyat" />
+            <TableColumn fx:id="adet" prefWidth="75.0" text="Adet" />
+            <TableColumn fx:id="aciklama" prefWidth="92.0" text="Açıklama" />
+        </columns>
+      </TableView>
+      <Button fx:id="cikisbtn" layoutX="662.0" layoutY="14.0" mnemonicParsing="false" onAction="#cikisclick" prefHeight="35.0" prefWidth="105.0" style="-fx-background-color: transparent;" text="Geri Dön">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-back-25.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="degerbtn" layoutX="491.0" layoutY="534.0" mnemonicParsing="false" onAction="#degerclick" prefHeight="50.0" prefWidth="122.0" text="Hesapla">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-calculate-40.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Pane layoutY="57.0" prefHeight="4.0" prefWidth="762.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rapor" wrappingWidth="387.13671875">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="401.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-exchange-lira-25.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

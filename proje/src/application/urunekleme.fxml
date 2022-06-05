@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="924.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.uruneklemeController">
+   <children>
+      <Label layoutX="40.0" layoutY="146.0" text="Kategori">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="203.0" text="Ürün Adı ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="271.0" text="Beden">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="327.0" text="Renk">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="380.0" text="Fiyat">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="428.0" text="Adet">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="476.0" text="Açıklama">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="kategoritxt" layoutX="130.0" layoutY="144.0" prefHeight="25.0" prefWidth="158.0" />
+      <TextField fx:id="urunaditxt" layoutX="130.0" layoutY="201.0" prefHeight="25.0" prefWidth="158.0" />
+      <TextField fx:id="bedentxt" layoutX="130.0" layoutY="269.0" prefHeight="25.0" prefWidth="158.0" />
+      <TextField fx:id="renktxt" layoutX="130.0" layoutY="325.0" prefHeight="25.0" prefWidth="158.0" />
+      <TextField fx:id="fiyattxt" layoutX="130.0" layoutY="378.0" prefHeight="25.0" prefWidth="158.0" />
+      <TextField fx:id="adettxt" layoutX="130.0" layoutY="426.0" prefHeight="25.0" prefWidth="158.0" />
+      <TextArea fx:id="aciklamatxt" layoutX="130.0" layoutY="476.0" prefHeight="102.0" prefWidth="158.0" />
+      <Label layoutX="305.0" layoutY="94.0" text="Filtrele">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="filtreletxt" layoutX="363.0" layoutY="91.0" />
+      <Button fx:id="arabtn" layoutX="525.0" layoutY="91.0" mnemonicParsing="false" onAction="#araclick" prefHeight="21.0" prefWidth="68.0" style="-fx-background-color: transparent;" text="Ara" />
+      <Button fx:id="uruneklebtn" layoutX="73.0" layoutY="593.0" mnemonicParsing="false" onAction="#urunekleclick" prefHeight="35.0" prefWidth="102.0" text="Ürün Ekle">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-add-22.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="guncellebtn" layoutX="203.0" layoutY="593.0" mnemonicParsing="false" onAction="#guncelleclick" prefHeight="35.0" prefWidth="102.0" text="Güncelle">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-update-25.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Button fx:id="silbtn" layoutX="334.0" layoutY="593.0" mnemonicParsing="false" onAction="#silclick" prefHeight="35.0" prefWidth="90.0" text="Sil">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-delete-25.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TableView fx:id="tableview" layoutX="305.0" layoutY="144.0" prefHeight="433.0" prefWidth="607.0">
+        <columns>
+            <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="urunadi" prefWidth="75.0" text="Ürün Adı" />
+          <TableColumn fx:id="kategori" prefWidth="75.0" text="Kategori" />
+            <TableColumn fx:id="beden" prefWidth="70.0" text="Beden" />
+            <TableColumn fx:id="renk" text="Renk" />
+            <TableColumn fx:id="fiyat" prefWidth="75.0" text="Fiyat" />
+            <TableColumn fx:id="adet" prefWidth="75.0" text="Adet" />
+            <TableColumn fx:id="aciklama" prefWidth="75.0" text="Açıklama" />
+        </columns>
+      </TableView>
+      <Button fx:id="cikis" layoutX="847.0" layoutY="14.0" mnemonicParsing="false" onAction="#cikisclick" style="-fx-background-color: transparent;" text="Çıkış">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-close-window-22.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="519.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-search-25.png" />
+         </image>
+      </ImageView>
+      <Pane layoutY="61.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text layoutX="36.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stok Ve Ürün İşlemleri" wrappingWidth="371.09375">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

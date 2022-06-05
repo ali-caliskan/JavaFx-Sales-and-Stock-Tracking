@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="460.0" prefWidth="450.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.sifremiunuttumController">
+   <children>
+      <Label layoutX="74.0" layoutY="126.0" text="Kullanıcı Adı:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="kullaniciaditxt" layoutX="189.0" layoutY="124.0" />
+      <Button fx:id="btnsifredegistir" layoutX="200.0" layoutY="395.0" mnemonicParsing="false" onAction="#degistirclick" text="Şifre Değiştir">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons8-password-reset-25.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Button>
+      <Label layoutX="101.0" layoutY="200.0" text="Eski Şifre:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sifretxt" layoutX="189.0" layoutY="198.0" />
+      <Label layoutX="100.0" layoutY="276.0" text="Yeni Şifre:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="yenisfiretxt" layoutX="189.0" layoutY="274.0" />
+      <Pane layoutY="66.0" prefHeight="3.0" prefWidth="200.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Text layoutX="19.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Şifre Değiştir" wrappingWidth="223.13671875">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="cikisimage" fitHeight="25.0" fitWidth="25.0" layoutX="411.0" layoutY="14.0" onMouseClicked="#cikissifre" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icons8-close-window-22.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="51.0" layoutY="330.0" text="Şifreyi Onaylayın:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sifreonay" layoutX="189.0" layoutY="328.0" />
+      <Label fx:id="lblkullaniciadi" alignment="TOP_LEFT" layoutX="189.0" layoutY="158.0" prefHeight="17.0" prefWidth="149.0" style="-fx-background-color: transparent;" text="Label" textFill="WHITE" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbleskisifre" layoutX="189.0" layoutY="230.0" prefHeight="17.0" prefWidth="149.0" text="Label" textFill="WHITE" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

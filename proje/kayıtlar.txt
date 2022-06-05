@@ -1,0 +1,3 @@
+Urun adi=klavye
+Kategori=teknoloji
+ToplamTutar=150
